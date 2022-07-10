@@ -37,7 +37,7 @@ public class PremierLeagueDAO {
 	}
 	
 	public List<Team> listAllTeams(){
-		String sql = "SELECT * FROM Teams";
+		String sql = "SELECT * FROM Teams Order By name";
 		List<Team> result = new ArrayList<Team>();
 		Connection conn = DBConnect.getConnection();
 
@@ -111,5 +111,6 @@ public class PremierLeagueDAO {
 			return null;
 		}
 	}
+	
 	
 }
